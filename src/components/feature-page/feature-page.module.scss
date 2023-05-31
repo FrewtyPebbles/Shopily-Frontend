@@ -1,0 +1,35 @@
+.root {
+	padding-top: 100px;
+	color: rgb(62, 62, 62);
+	&>p {
+		font-style: italic;
+	}
+}
+
+.smalltitle {
+	text-indent: 15px;
+}
+
+hr {
+	margin: 2.5%;
+	border-width: 3px;
+	border-style: dotted none none none;
+	color: rgb(205, 205, 205);
+}
+
+.ForYou {
+	>div {
+		margin: 5px;
+	}
+	display: flex;
+	overflow:hidden;
+	width: 100vw;
+}
+
+.centered {
+	text-indent: 15%;
+	padding: 10px 30px;
+	text-align: center;
+	color: rgb(85, 85, 85);
+}
+

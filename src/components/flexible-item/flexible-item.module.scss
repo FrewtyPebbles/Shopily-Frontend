@@ -1,0 +1,75 @@
+@import "../../globalvariables";
+$borederrounding: 5px;
+.root {
+	border-radius: $borederrounding;
+	.image {
+		display: block;
+		height: 100%;
+	}
+	&:hover{
+		cursor: pointer;
+		>.title{
+			animation: titleFadeIn 1s;
+			opacity: 1;
+		}
+		>.boxshadow {
+			animation: shadowFadeIn 1s;
+			opacity: 1;
+		}
+	}
+	.title {
+		span {
+			padding: 10px;
+		}
+		.price {
+			&::before {
+				content: "$";
+			}
+			//font-size: 20px;
+			color: $col3;
+		}
+		animation: titleFadeOut 1s;
+		opacity: 0;
+		display: flex;
+		justify-content: space-between;
+		font-size: 20px;
+		position: absolute;
+	}
+	.boxshadow {
+		box-shadow: -2em 7.4em 5em -5em $col1 inset;
+		height: 200px;
+		position: absolute;
+		animation: shadowFadeOut 1s;
+		opacity: 0;
+		border-radius: $borederrounding;
+	}
+	overflow: hidden;
+}
+@keyframes shadowFadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes shadowFadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+@keyframes titleFadeIn {
+	0% {
+		opacity: 0;
+		transform: translate(0, -30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+@keyframes titleFadeOut {
+	0% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0, 30px);
+	}
+}

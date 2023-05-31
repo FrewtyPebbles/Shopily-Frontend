@@ -1,0 +1,81 @@
+@import './../../globalvariables';
+.root {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.toproot{
+	&:hover {
+		cursor: pointer;
+		+ div.bottomroot {
+			height: fit-content;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+	width: inherit;
+	height: 80%;
+	.boxshadow {
+		position: absolute;
+		box-shadow: -2em 7.4em 6em -5em $col1 inset;
+		width: inherit;
+		height: 200px;
+		border-radius: 10px 10px 0 0;
+	}
+	.titlebar {
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		height: 20px;
+		width: inherit;
+		
+		.title {
+			font-size: 21px;
+			padding: 10px;
+		}
+		.price {
+			color: $col3;
+			text-indent: 10px;
+			padding: 10px;
+		}
+	}
+	.currentimage {
+		width: calc(100%);
+		min-height: calc(100%);
+	}
+}
+
+.bottomroot {
+	background-color: $col2;
+	border-radius: 0 0 10px 10px;
+	padding: 10px;
+	border-style: solid none none none;
+	border-width: 1px;
+	border-color: $col4;
+	height: fit-content;
+	max-height: 25%;
+	width: calc(100% - 20px);
+	overflow: hidden;
+	.ratingroot {
+		display: flex;
+		justify-content: space-between;
+		.ratingbg {
+			position: absolute;
+			height: 25px;
+			width: 130px;
+			z-index: 2;
+		}
+		.starsroot {
+			overflow: hidden;
+			.rating {
+				height: 25px;
+				width: 130px;
+			}
+			z-index: 3;
+		}
+	}
+}
