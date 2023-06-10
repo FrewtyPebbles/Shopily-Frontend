@@ -7,13 +7,14 @@
 .displayroot {
 	display: flex;
 	.searchroot {
-		border-style: none solid none none;
+		border-style: solid solid solid none;
 		border-color: $col3;
 		padding: 10px;
 		position: sticky;
-		top: 72px;
+		top: 69px;
+		margin-left: -8px;
 		align-self: flex-start;
-		height: calc(100vh - 100px);
+		height: calc(100vh - 103px);
 	}
 	.searchrootopen {
 		.searchtitle {
@@ -29,6 +30,11 @@
 	}
 	.itemdisplayroot {
 		flex-grow: 1;
+	}
+	.itemdisplayrootopen {
 		width: calc(100% - 220px);
+	}
+	.itemdisplayrootclosed {
+		width: calc(100% - 40px);
 	}
 }

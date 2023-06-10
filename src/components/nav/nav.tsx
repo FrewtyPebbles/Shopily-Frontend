@@ -23,6 +23,7 @@ export interface NavProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/configuration-for-navs-and-templates
  */
 export const Nav = ({ className, pages, options, currentpage, title }: NavProps) => {
+    options
     const [isOpen, toggleOpen] = useState(false);
 
     function toggle_hamburger() {

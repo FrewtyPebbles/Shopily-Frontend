@@ -1,7 +1,7 @@
 import {classNames} from '../../globalutility';
 import styles from './feature-page.module.scss';
 import { ItemCard } from '../item-card/item-card';
-import { useRef, useState } from 'preact/hooks';
+import { useRef } from 'preact/hooks';
 import { mouse_over_featured, touch_move_featured } from './utility';
 import { FlexibleItemDisplay } from '../flexible-item-display/flexible-item-display';
 import { FlexibleItemProps } from '../flexible-item/flexible-item';
@@ -20,8 +20,8 @@ export interface FeaturePageProps {
 
 export const FeaturePage = ({ className, newreleases, featureditems }: FeaturePageProps) => {
     let feature_num_width = 300
-    let feature_width = `${feature_num_width}px`
-    let feature_height = "300px"
+    //let feature_width = `${feature_num_width}px`
+    //let feature_height = "300px"
     const touch_last = useRef<[number, number]>([0,0])
     return <div className={classNames(styles.root, className)}>
         <h1 style={{textAlign: "center"}}>SHOPILY</h1>

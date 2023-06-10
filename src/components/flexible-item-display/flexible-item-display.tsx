@@ -16,7 +16,7 @@ export const FlexibleItemDisplay = ({ className, items }: FlexibleItemDisplayPro
     const rearrange_timer = useRef(true);
     const resizeObserver = new ResizeObserver((entries) => {
         if (rearrange_timer.current)
-        for (const entry of entries) {
+        for (const _ of entries) {
                 rearrange_timer.current = false
                 //console.log("RESIZE");
                 sizedchunk_array(JSON.parse(JSON.stringify(items_const)), 10, root_ref.current != null ? root_ref.current?.getBoundingClientRect().width : 500).then((chunk_array)=>{

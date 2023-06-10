@@ -16,12 +16,13 @@ export interface FlexibleItemProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/configuration-for-flexible-items-and-templates
  */
 export const FlexibleItem = ({ className, img_url, alt_img_urls, title, price, height }: FlexibleItemProps) => {
+    alt_img_urls
     const root_ref = useRef<HTMLDivElement | null>(null)
     const [root_element_width, change_root_element_width] = useState<string>("")
     const title_ref = useRef<HTMLDivElement | null>(null)
     const title_size = useRef(15)
     const resizeObserver = new ResizeObserver((entries) => {
-        for (const entry of entries) {
+        for (const _ of entries) {
             let elem_width = root_ref.current?.getBoundingClientRect().width
             let elem_height = root_ref.current?.getBoundingClientRect().height
             let font_size = 15 * ((((elem_width as number)/(elem_height as number)) + ((elem_height as number)/(elem_width as number)))/2)
@@ -40,6 +41,6 @@ export const FlexibleItem = ({ className, img_url, alt_img_urls, title, price, h
     return <div ref={root_ref} style={{height:height}} className={classNames(styles.root, className)}>
         <div style={{width:root_element_width}} className={classNames(styles.boxshadow, className)}></div>
         <div ref={title_ref} style={{width:root_element_width, fontSize:`${title_size.current}px`}} className={classNames(styles.title, className)}><span>{title}</span><span className={classNames(styles.price, className)}>{price}</span></div>
-        <img className={classNames(styles.image, className)} src={img_url} alt="" />
+        <img loading={"lazy"} className={classNames(styles.image, className)} src={img_url} alt="" />
     </div>;
 };

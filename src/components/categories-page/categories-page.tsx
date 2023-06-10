@@ -18,13 +18,14 @@ export const CategoriesPage = ({ className, items }: CategoriesPageProps) => {
     return <div className={classNames(styles.root, className)}>
         <h1>Catalogue</h1>
         {!window.matchMedia("(pointer:coarse)").matches ? 
+        // PC
         <div className={classNames(styles.displayroot, className)}>
             {search_open ? 
             <div className={classNames(styles.searchroot, styles.searchrootopen, className)}>
                 {/* VERTICAL SEARCH BAR */}
-                <div className={classNames(styles.searchtitle, className)}>
+                <div onClick={() => {change_search_open(!search_open)}} className={classNames(styles.searchtitle, className)}>
                     <div>Search</div>
-                    <div onClick={() => {change_search_open(!search_open)}}>-</div>
+                    <div>-</div>
                 </div>
 
                 <input type="text" />
@@ -33,17 +34,17 @@ export const CategoriesPage = ({ className, items }: CategoriesPageProps) => {
             </div>
             :
             <div className={classNames(styles.searchroot, styles.searchrootclosed, className)}>
-                <div>
-                    <div onClick={() => {change_search_open(!search_open)}}>+</div>
+                <div onClick={() => {change_search_open(!search_open)}}>
+                    <div>+</div>
                 </div>
             </div>}
-            <div className={classNames(styles.itemdisplayroot, className)}>
+            <div className={classNames(styles.itemdisplayroot, search_open ? styles.itemdisplayrootopen : styles.itemdisplayrootclosed, className)}>
                 <FlexibleItemDisplay items={items}></FlexibleItemDisplay>
             </div>
         </div>
-        :
+        : // MOBILE
         <div>
-            <div>
+            <div className={classNames(styles.itemdisplayroot, className)}>
                 <FlexibleItemDisplay items={items}></FlexibleItemDisplay>
             </div>
         </div>}

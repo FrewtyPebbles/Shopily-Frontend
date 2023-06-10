@@ -130,6 +130,41 @@ export const test_featurepage_releases = [
 		alt_img_urls: [],
 		title: 'Strawberry Shower Gel',
 		price: 9.99,
+	},
+	{
+		img_url:
+			'https://www.imagenmore.ae/images/Product-photography-best-abu-dhabi-dubai-perfume-bottles-photograher-best.jpg',
+		alt_img_urls: [],
+		title: 'VS Fragrance',
+		price: 99.99,
+	},
+	{
+		img_url:
+			'https://cdn.shopify.com/s/files/1/0093/8206/8321/products/adams_polishes_Strip_wash_product_photo_1600x.jpg?v=1679334719',
+		alt_img_urls: [],
+		title: 'Adam\'s Polishes Strip Wash',
+		price: 19.99,
+	},
+	{
+		img_url:
+			'https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+		alt_img_urls: [],
+		title: 'Teal Leather Shoes',
+		price: 39.99,
+	},
+	{
+		img_url:
+			'https://b899dd1e0d9c288c926b-46ed15f1667a2ce8a3d435fe099b0105.ssl.cf1.rackcdn.com/Product-photography-ireland-TNOT.jpg',
+		alt_img_urls: [],
+		title: 'Lemon Essential Oil',
+		price: 39.99,
+	},
+	{
+		img_url:
+			'https://images.pexels.com/photos/3270223/pexels-photo-3270223.jpeg?cs=srgb&dl=pexels-kristina-paukshtite-3270223.jpg&fm=jpg',
+		alt_img_urls: [],
+		title: 'Pine Forest Essential Oil',
+		price: 39.99,
 	}
 ]
 export const test_featurepage_featured_items = [
