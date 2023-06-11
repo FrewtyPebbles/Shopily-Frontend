@@ -2,7 +2,7 @@ import {classNames} from '../../globalutility';
 import styles from './categories-page.module.scss';
 import { FlexibleItemDisplay } from '../flexible-item-display/flexible-item-display';
 import { FlexibleItemProps } from '../flexible-item/flexible-item';
-import { useState } from 'preact/hooks';
+import { useState } from 'react';
 
 export interface CategoriesPageProps {
     className?: string;

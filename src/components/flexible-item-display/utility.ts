@@ -5,7 +5,7 @@ export function shuffle<Type>(array:Type[]):Type[] {
   let currentIndex = array.length,  randomIndex;
 
   // While there remain elements to shuffle.
-  while (currentIndex != 0) {
+  while (currentIndex !== 0) {
 
     // Pick a remaining element.
 	let s = new Date().getMilliseconds()
@@ -51,7 +51,7 @@ export async function sizedchunk_array(arr:FlexibleItemProps[], size:number, dis
 	let s = new Date().getMilliseconds()
 	var rng = seedrandom(`${s}`)
 	var ret_array:FlexibleItemProps[][] = []
-	while(arr.length != 0) {
+	while(arr.length !== 0) {
 		let remaining_width = display_width
 		let chunk:FlexibleItemProps[] = []
 		var true_height = rand_range_int(200, 250)
@@ -70,7 +70,7 @@ export async function sizedchunk_array(arr:FlexibleItemProps[], size:number, dis
 					) && rng() < 0.5)
 				{
 					biggest_item = [item, true_width, ind, hratio];
-					if (rng() < 0.2 && chunk.length == 1 && ret_array.length > 1) {
+					if (rng() < 0.2 && chunk.length === 1 && ret_array.length > 1) {
 						break
 					}
 				}
@@ -89,7 +89,7 @@ export async function sizedchunk_array(arr:FlexibleItemProps[], size:number, dis
 			}
 		}
 		if (chunk.length === 1){
-			chunk[0].img_url
+			//chunk[0].img_url
 			let img = await load_image(chunk[0].img_url)
 			let width = img.width
 			let height = img.height

@@ -2,7 +2,7 @@ import styles from './App.module.scss';
 import { Nav } from './components/nav/nav';
 import { FeaturePage } from './components/feature-page/feature-page';
 import { test_featurepage_featured_items, test_featurepage_releases } from './testdata';
-import { useEffect } from 'preact/hooks';
+import { useEffect } from 'react';
 import { CategoriesPage } from './components/categories-page/categories-page';
 
 export interface AppProps {

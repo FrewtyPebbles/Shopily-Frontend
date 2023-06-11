@@ -1,7 +1,7 @@
 import { classNames } from '../../globalutility';
 import styles from './nav.module.scss';
-import { useState } from 'preact/hooks';
-import React from 'preact/compat';
+import { useState } from 'react';
+import React from 'react';
 
 
 interface Page {
@@ -23,7 +23,7 @@ export interface NavProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/configuration-for-navs-and-templates
  */
 export const Nav = ({ className, pages, options, currentpage, title }: NavProps) => {
-    options
+    //options
     const [isOpen, toggleOpen] = useState(false);
 
     function toggle_hamburger() {
@@ -56,7 +56,7 @@ export const Nav = ({ className, pages, options, currentpage, title }: NavProps)
                         {pages.map((data, key) => (
                             <li
                                 style={
-                                    { '--background-color': currentpage == data.page ? "#f2f2f2" : "none" } as React.CSSProperties
+                                    { '--background-color': currentpage === data.page ? "#f2f2f2" : "none" } as React.CSSProperties
                                 }
                                 key={key}
                                 onClick={() => {

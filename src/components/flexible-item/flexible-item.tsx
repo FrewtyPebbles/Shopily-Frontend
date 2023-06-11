@@ -1,6 +1,6 @@
 import {classNames} from '../../globalutility';
 import styles from './flexible-item.module.scss';
-import { useEffect, useRef, useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'react';
 
 export interface FlexibleItemProps {
     className?: string;
@@ -16,7 +16,7 @@ export interface FlexibleItemProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/configuration-for-flexible-items-and-templates
  */
 export const FlexibleItem = ({ className, img_url, alt_img_urls, title, price, height }: FlexibleItemProps) => {
-    alt_img_urls
+    //alt_img_urls
     const root_ref = useRef<HTMLDivElement | null>(null)
     const [root_element_width, change_root_element_width] = useState<string>("")
     const title_ref = useRef<HTMLDivElement | null>(null)

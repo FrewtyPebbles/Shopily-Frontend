@@ -2,7 +2,7 @@ import {classNames} from '../../globalutility';
 import styles from './flexible-item-display.module.scss';
 import { FlexibleItem, FlexibleItemProps } from '../flexible-item/flexible-item';
 import { sizedchunk_array} from './utility'
-import { useEffect, useRef, useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'react';
 
 export interface FlexibleItemDisplayProps {
     className?: string;
@@ -32,7 +32,6 @@ export const FlexibleItemDisplay = ({ className, items }: FlexibleItemDisplayPro
     useEffect(() => {
         if (root_ref.current != null)
         {
-            console.log("EFFECT");
             resizeObserver.observe(root_ref.current)
             sizedchunk_array(JSON.parse(JSON.stringify(items_const)), 5, root_ref.current.offsetWidth).then((chunk_array)=>{
                 change_chunked_items(chunk_array)
