@@ -24,4 +24,3 @@ dist-ssr
 *.sw?
 gh-pages
 gh-pages.pub
-package-lock.json
