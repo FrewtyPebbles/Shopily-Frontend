@@ -1,13 +1,15 @@
-import {render} from 'preact';
+import Router from 'preact-router'
+import { h, render} from 'preact';
 import App from './App';
-import Router, {Route} from 'preact-router'
-import './index.css';
 
+import AsyncRoute from 'preact-async-route';
+import './index.css';
+h
 const Main = () => (
     <Router>
-        <Route path='/' component={App} current_page='Feature'/>
-        <Route path='/categories' component={App} current_page='Categories'/>
-        <Route path='/about' component={App} current_page='About'/>
+        <AsyncRoute path='/' component={App} current_page='Feature'/>
+        <AsyncRoute path='/categories' component={App} current_page='Categories'/>
+        <AsyncRoute path='/about' component={App} current_page='About'/>
     </Router>
 );
 
