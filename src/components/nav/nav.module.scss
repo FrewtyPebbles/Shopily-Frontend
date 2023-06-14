@@ -84,6 +84,7 @@
   transform: translate(0px, 80%) rotate(-45deg);
   animation: ham-open-top 1s;
   border-radius: 10px;
+  border-width: 3px;
 }
 
 .hamburger_close_line_bottom {
@@ -95,6 +96,7 @@
   transform: translate(0px, -80%) rotate(45deg);
   animation: ham-open-bottom 1s;
   border-radius: 10px;
+  border-width: 3px;
 }
 
 @mixin ham-open-mix($which_one) {
